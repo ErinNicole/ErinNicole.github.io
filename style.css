@@ -4,12 +4,12 @@ h1{
     margin: 0;
 }
 h1#second-title {
-    color: blue;
+    color:black;
 }
 h1.italic-title {
     font-style: italic;
 }
 rect {
     fill: black;
-    stroke: green:
+    stroke: red:
 }
