@@ -1,5 +1,5 @@
-document.getElementById("title").innerHTML = "Welcome JavaScript";
-document.getElementById("title").style.color = "red";
+document.getElementById("title").innerHTML = "JavaScript Homework";
+document.getElementById("title").style.color = "black";
 
 var myNumber = 42;
 
