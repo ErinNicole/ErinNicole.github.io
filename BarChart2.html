@@ -8,25 +8,30 @@
 </head>
 
 <style>
-.radio{
-	text-align: center;
+.radio {
+	text-align: center; 
+}
+.radio:active {
+    background-color: rgb(0, 0, 0);  
+    color: orangered;
+    outline: 1px solid black
 }
 .row{
 	text-align: center;
 }
 /* Attempting to create a tooltip*/
 .bar:hover {
-  fill: orangered ;
+  fill: orangered;
 }
 </style>
 <body>
 <div class='container'>
 	<div class='row'>
         <h2>Persistence of Civic Associations 1890-1920</h2>
-            <p>Percentage of Associations in Existence for at Least 20 Years</p>
+            <h3>Percentage of Associations in Existence for at Least 20 Years</h3>
 					<div class='radio'>
 						<label class='radio-inline'>
-							<input type="radio" name="civicAssociations" value="Unions" style="background-color: blue" onclick = 'change(this.value)'> Unions
+							<input type="radio" name="civicAssociations" value="Unions" onclick = 'change(this.value)'> Unions
 						</label>
 						<label class='radio-inline'>
 							<input type="radio" name="civicAssociations" value="Churches" onclick='change(this.value)'> Churches
