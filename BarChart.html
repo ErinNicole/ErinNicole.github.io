@@ -184,7 +184,7 @@ function update(data){
 	//set domain for the x axis
 	xChart.domain(data.map(function(d){ return d.city_state; }) );
 	//set domain for y axis
-	yChart.domain( [0, d3.max(data, function(d){ return +d.percentage; })] );
+  yChart.domain( [0, 100] );
 	
 	//get the width of each bar 
 	var barWidth = width / data.length;
