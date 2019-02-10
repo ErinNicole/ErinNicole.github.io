@@ -1,10 +1,9 @@
 <html>
-
-<head>
-<title>D3 Updating Bar Chart</title>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+  <head>
+    <link rel="stylesheet" href="indexStyle.css">
+    <title>D3 Updating Bar Chart</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="barchart.js"></script>
 </head>
 
 <style>
@@ -27,7 +26,7 @@
 <body>
 <div class='container'>
 	<div class='row'>
-        <h2>Persistence of Civic Associations 1890-1920</h2>
+        <h1>Persistence of Civic Associations 1890-1920</h1>
             <h3>Percentage of Associations in Existence for at Least 20 Years</h3>
 					<div class='radio'>
 						<label class='radio-inline'>
@@ -45,8 +44,6 @@
 	</div>
 </div>
 </body>
-
-
 
 <script>
 //set up data
@@ -283,7 +280,7 @@ var div = d3.select("body").append("div")
 chart
 	.append("text")
 	.attr("transform", "translate(-35," +  (height+margin.bottom)/2 + ") rotate(-90)")
-	.text("Percent Surviving at Least 20 Years");
+  .text("Percent Surviving at Least 20 Years");
 		
 chart
 	.append("text")
