@@ -4,7 +4,7 @@ var title = d3.select("#title");
 
 title
     .attr("class", "big")
-    .style("color", "green")
+    .style("color", "steelblue")
     .style("font-family", "Helvetica");
 
 var svg = d3.select("svg");
