@@ -19,8 +19,6 @@ function dance() {
     });
 }
 
-object.onclick = dance();
-
 var starterData = [
     {name: "Dave", height: 72},
     {name: "Matthew", height: 67},
