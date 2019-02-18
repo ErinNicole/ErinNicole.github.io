@@ -8,9 +8,13 @@ title
     .style("font-family", "Helvetica");
 
 var svg = d3.select("svg");
+var dataSetOne = ["red", "redorange", "orange"];
+var dataSetTwo = ["green","steelblue","blue","purple","rebeccapurlple"];
 
 function changeColor(color){
-    svg.selectAll(".dot").attr("fill", color);
+    svg.selectAll(".dot").attr("fill", function(){
+        return dataSetOne();
+    }
 }
 
 function dance() {
