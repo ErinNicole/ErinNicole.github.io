@@ -3,23 +3,71 @@
     <head>
         <meta charset="utf-8"/>
         <title>Scales, Tooltips, Axes, oh my!</title>
-        <h1>Scales, Tooltips, Axes, oh my!</h1>
         <script src="https://d3js.org/d3.v4.min.js"></script>
+        <style>
+            body {
+                margin: 0;
+            }
+            #tooltip {
+                border: 1px solid black;
+                display: none;
+                position: absolute;
+            }
+            h1 {
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
+        <svg width="100%">
+            <g id="xAxis" transform="translate(0, 100)"></g>
+        </svg>
         <script>
-            var data = [0.2, 1.7, 4.3, 3.3];
+
+            var data = [0.2, 0.4, 1.7, 4.3, 3.3];
 
             var xScale = d3.scaleLinear()
-                .domain([0, 5])
-                .range([0, window.innerWidth]);
-
+                .domain([0, 10])
+                .range([50, window.innerWidth - 100]);
             
                 var colorScale = d3.scaleLinear()
                 .domain([0, 5])
                 .range(["black", "red"]);
 
             var svg = d3.select("svg");
+            
+            var circles = svg.selectAll("circle")
+                .data(data);
+            
+            circle.enter().append("circle")
+                .attr("r", 10)
+                .attr("fill", function(d) {
+                    return colorScale(d);
+                })
+                .attr("cx", function(d) {
+                    return xScale(d);
+                })
+                .attr("cy", 50);
+
+            d3.selectAll("circle")
+                .on("click", function(d) {
+                    console.log(d);
+                })
+                .on("mousemove", function(d) {
+                    var mouse = d3.mouse(this);
+                    d3.select("#tooltip")
+                        .style("display", "block")
+                        .html("<h1>" + d + "</h1>")
+                        .style("left", mouse[0] + "px")
+                        .style("top", mouse[1] - 50 + "px");
+                })
+                .on("mouseout", function(d) {
+                    d3.select("#tooltip")
+                        .style("display", "none")
+                });
+
+            var axis = d3.axisBottom(xScale);
+            d3.select("#xAxis").call(axis);
 
         </script>
     </body>
