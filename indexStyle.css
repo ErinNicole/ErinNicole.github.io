@@ -29,8 +29,8 @@ h1 {
         font-style: normal; 
         font-variant: normal; 
         font-weight: bold; 
-        padding-left: 220px;
-        padding-right: 220px;
+        padding-left: 250px;
+        padding-right: 250px;
     } 
 h2 { 
         text-align: center;
@@ -39,8 +39,8 @@ h2 {
         font-style: normal; 
         font-variant: normal; 
         font-weight: bold; 
-        padding-left: 220px;
-        padding-right: 220px;
+        padding-left: 250px;
+        padding-right: 250px;
     } 
 
 h3 { 
@@ -50,13 +50,13 @@ h3 {
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal; 
-        padding-left: 220px;
-        padding-right: 220px;  
+        padding-left: 250px;
+        padding-right: 250px;  
     } 
     
 p  {       
         text-align: left;
-        font-family: Times; 
+        font-family: Garamond; 
         font-size: 16px; 
         font-style: normal; 
         font-variant: normal; 
