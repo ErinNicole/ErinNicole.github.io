@@ -53,6 +53,17 @@ h3 {
         padding-left: 250px;
         padding-right: 250px;
     } 
+
+    h4 { 
+      text-align: left;
+      font-family: Helvetica; 
+      font-size: 16px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: bold; 
+      padding-left: 250px;
+      padding-right: 250px;
+  } 
     
 p  {       
         text-align: left;
