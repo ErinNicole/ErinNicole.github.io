@@ -28,7 +28,12 @@ a:link {
         border:0;
 }  
 #wrapper {
-        width:1200px;
+        width: 1200px;
+        margin: auto;
+}
+
+#headline {
+        width: 1200px;
         margin: auto;
 }
 
