@@ -51,20 +51,20 @@ h3 {
         font-variant: normal; 
         font-weight: normal; 
         padding-left: 250px;
-        padding-right: 250px;  
+        padding-right: 250px;
     } 
     
 p  {       
         text-align: left;
         font-family: Garamond; 
-        font-size: 16px; 
+        font-size: 18px; 
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal; 
-        line-height: 24px;
+        line-height: 32px;
         letter-spacing: 1px;
-        padding-left: 220px;
-        padding-right: 220px;
+        padding-left: 275px;
+        padding-right: 275px;
     } 
     
 blockquote { 
@@ -74,9 +74,9 @@ blockquote {
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal; 
-        padding-left: 220px;
-        padding-right: 220px;      
-    } 
+        padding-left: 275px;
+        padding-right: 275px;
+   } 
     
 pre {
   
@@ -86,6 +86,6 @@ pre {
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal; 
-        padding-left: 220px;
-        padding-right: 220px;       
+        padding-left: 275px;
+        padding-right: 275px;
     }
