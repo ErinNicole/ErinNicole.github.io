@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.19.0125.1454                               -->
+<workbook source-build='2018.2.6 (20182.19.0125.1454)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (Large US Membership Associations)' inline='true' name='federated.0r7e62z1mqcbiu1b6dici0sv0e8e' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Large US Membership Associations' name='excel-direct.1gezjvj0v3stzq13v4v7n14sqdic'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/erinshackelford/Desktop/IDV/ARTG5330 Visual Technologies Spring 2019/Final Project Data/Large US Membership Associations.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1gezjvj0v3stzq13v4v7n14sqdic' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:L47:no:A1:L47:0' header='yes' outcome='6'>
+            <column datatype='string' name='ASSOCIATION' ordinal='0' />
+            <column datatype='string' name='ASSOCIATION TYPE' ordinal='1' />
+            <column datatype='integer' name='FOUNDING YEAR' ordinal='2' />
+            <column datatype='string' name='FOUNDING LOCATION' ordinal='3' />
+            <column datatype='integer' name='ENDING YEAR' ordinal='4' />
+            <column datatype='integer' name='YEARS IN EXISTENCE' ordinal='5' />
+            <column datatype='string' name='SCOPE AT INCEPTION' ordinal='6' />
+            <column datatype='string' name='NAT&apos;L ASSOC STRUCTURE' ordinal='7' />
+            <column datatype='integer' name='NAT&apos;L ASSOC STRUCTURE YEAR' ordinal='8' />
+            <column datatype='string' name='ABOVE 1% START' ordinal='9' />
+            <column datatype='string' name='ABOVE 1% END' ordinal='10' />
+            <column datatype='integer' name='YEARS ABOVE 1%' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ASSOCIATION</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ASSOCIATION]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ASSOCIATION</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ASSOCIATION TYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ASSOCIATION TYPE]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ASSOCIATION TYPE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FOUNDING YEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FOUNDING YEAR]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>FOUNDING YEAR</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FOUNDING LOCATION</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[FOUNDING LOCATION]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>FOUNDING LOCATION</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ENDING YEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ENDING YEAR]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ENDING YEAR</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEARS IN EXISTENCE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YEARS IN EXISTENCE]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>YEARS IN EXISTENCE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCOPE AT INCEPTION</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SCOPE AT INCEPTION]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>SCOPE AT INCEPTION</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAT&apos;L ASSOC STRUCTURE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[NAT&apos;L ASSOC STRUCTURE]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>NAT&apos;L ASSOC STRUCTURE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAT&apos;L ASSOC STRUCTURE YEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NAT&apos;L ASSOC STRUCTURE YEAR]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>NAT&apos;L ASSOC STRUCTURE YEAR</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ABOVE 1% START</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ABOVE 1% START]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ABOVE 1% START</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ABOVE 1% END</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ABOVE 1% END]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ABOVE 1% END</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEARS ABOVE 1%</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YEARS ABOVE 1%]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>YEARS ABOVE 1%</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L47:no:A1:L47:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Above 1% End' datatype='string' name='[ABOVE 1% END]' role='dimension' type='nominal' />
+      <column caption='Above 1% Start' datatype='string' name='[ABOVE 1% START]' role='dimension' type='nominal' />
+      <column datatype='string' name='[ASSOCIATION TYPE]' role='dimension' type='nominal' />
+      <column caption='Ending Year' datatype='integer' name='[ENDING YEAR]' role='dimension' type='quantitative' />
+      <column caption='Founding Location' datatype='string' name='[FOUNDING LOCATION]' role='dimension' type='nominal' />
+      <column caption='Founding Year' datatype='integer' name='[FOUNDING YEAR]' role='dimension' type='quantitative' />
+      <column caption='Nat&apos;L Assoc Structure Year' datatype='integer' name='[NAT&apos;L ASSOC STRUCTURE YEAR]' role='measure' type='quantitative' />
+      <column caption='Nat&apos;L Assoc Structure' datatype='string' name='[NAT&apos;L ASSOC STRUCTURE]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Scope At Inception' datatype='string' name='[SCOPE AT INCEPTION]' role='dimension' type='nominal' />
+      <column caption='Years Above 1%' datatype='integer' name='[YEARS ABOVE 1%]' role='measure' type='quantitative' />
+      <column caption='Years In Existence' datatype='integer' name='[YEARS IN EXISTENCE]' role='measure' type='quantitative' />
+      <column-instance column='[ASSOCIATION TYPE]' derivation='None' name='[none:ASSOCIATION TYPE:nk]' pivot='key' type='nominal' />
+      <column-instance column='[NAT&apos;L ASSOC STRUCTURE]' derivation='None' name='[none:NAT&apos;L ASSOC STRUCTURE:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='State, City' />
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.541612' measure-ordering='alphabetic' measure-percentage='0.458388' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:ASSOCIATION TYPE:nk]' palette='red_gold_10_0' type='palette'>
+            <map to='#b71d3e'>
+              <bucket>&quot;Sports Organization&quot;</bucket>
+            </map>
+            <map to='#c22f40'>
+              <bucket>&quot;Service Organization&quot;</bucket>
+            </map>
+            <map to='#cd3e43'>
+              <bucket>&quot;Secret Society&quot;</bucket>
+            </map>
+            <map to='#d74d46'>
+              <bucket>&quot;Religious Society&quot;</bucket>
+            </map>
+            <map to='#e15c48'>
+              <bucket>&quot;Reform Movement&quot;</bucket>
+            </map>
+            <map to='#e96b49'>
+              <bucket>&quot;Protective Organization&quot;</bucket>
+            </map>
+            <map to='#f17a4a'>
+              <bucket>&quot;Labor Federation&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>&quot;Cultural Organization&quot;</bucket>
+            </map>
+            <map to='#f5bf5a'>
+              <bucket>&quot;Fraternal Benefit Society&quot;</bucket>
+            </map>
+            <map to='#f8894c'>
+              <bucket>&quot;Humanitarian Organization&quot;</bucket>
+            </map>
+            <map to='#f8ad52'>
+              <bucket>&quot;Fraternal Order&quot;</bucket>
+            </map>
+            <map to='#fb9b4e'>
+              <bucket>&quot;Hate Group&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:NAT&apos;L ASSOC STRUCTURE:nk]' palette='blue_teal_10_0' type='palette'>
+            <map to='#2d608a'>
+              <bucket>&quot;Fed/St/Loc&quot;</bucket>
+            </map>
+            <map to='#358ead'>
+              <bucket>&quot;Nat/Mid/Loc&quot;</bucket>
+            </map>
+            <map to='#72bac6'>
+              <bucket>&quot;Nat/Loc&quot;</bucket>
+            </map>
+            <map to='#bce4d8'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Nat&apos;L Assoc Structure' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Assc Type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Large U.S. Membership Associations by Type and Year of Founding</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Large US Membership Associations)' name='federated.0r7e62z1mqcbiu1b6dici0sv0e8e' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0r7e62z1mqcbiu1b6dici0sv0e8e'>
+            <column datatype='string' name='[ASSOCIATION TYPE]' role='dimension' type='nominal' />
+            <column datatype='string' name='[ASSOCIATION]' role='dimension' type='nominal' />
+            <column caption='Founding Year' datatype='integer' name='[FOUNDING YEAR]' role='dimension' type='quantitative' />
+            <column caption='Years In Existence' datatype='integer' name='[YEARS IN EXISTENCE]' role='measure' type='quantitative' />
+            <column-instance column='[ASSOCIATION TYPE]' derivation='None' name='[none:ASSOCIATION TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ASSOCIATION]' derivation='None' name='[none:ASSOCIATION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FOUNDING YEAR]' derivation='None' name='[none:FOUNDING YEAR:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[YEARS IN EXISTENCE]' derivation='None' name='[none:YEARS IN EXISTENCE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FOUNDING YEAR]' derivation='Sum' name='[sum:FOUNDING YEAR:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION:nk]' direction='ASC' using='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[sum:FOUNDING YEAR:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]' scope='cols' value='Years in Existence' />
+            <encoding attr='space' class='0' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]' field-type='quantitative' major-origin='0' major-spacing='100' max='2000' min='1720' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION:nk]' value='384' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION TYPE:nk]' value='Association Type'>
+              <formatted-text>
+                <run>Association Type</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION TYPE:nk]' />
+              <size column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:YEARS IN EXISTENCE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.076464056968689' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION:nk]</rows>
+        <cols>[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Structure'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Large U.S. Membership Associations by Structure and Year of Founding</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Large US Membership Associations)' name='federated.0r7e62z1mqcbiu1b6dici0sv0e8e' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0r7e62z1mqcbiu1b6dici0sv0e8e'>
+            <column datatype='string' name='[ASSOCIATION]' role='dimension' type='nominal' />
+            <column caption='Founding Year' datatype='integer' name='[FOUNDING YEAR]' role='dimension' type='quantitative' />
+            <column caption='Nat&apos;L Assoc Structure' datatype='string' name='[NAT&apos;L ASSOC STRUCTURE]' role='dimension' type='nominal' />
+            <column caption='Years In Existence' datatype='integer' name='[YEARS IN EXISTENCE]' role='measure' type='quantitative' />
+            <column-instance column='[ASSOCIATION]' derivation='None' name='[none:ASSOCIATION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FOUNDING YEAR]' derivation='None' name='[none:FOUNDING YEAR:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NAT&apos;L ASSOC STRUCTURE]' derivation='None' name='[none:NAT&apos;L ASSOC STRUCTURE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[YEARS IN EXISTENCE]' derivation='None' name='[none:YEARS IN EXISTENCE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FOUNDING YEAR]' derivation='Sum' name='[sum:FOUNDING YEAR:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION:nk]' direction='ASC' using='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[sum:FOUNDING YEAR:qk]' />
+          <manual-sort column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:NAT&apos;L ASSOC STRUCTURE:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>%null%</bucket>
+              <bucket>&quot;Nat/Loc&quot;</bucket>
+              <bucket>&quot;Nat/Mid/Loc&quot;</bucket>
+              <bucket>&quot;Fed/St/Loc&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]' field-type='quantitative' major-origin='0' major-spacing='100' max='2000' min='1700' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]' scope='cols' value='Years in Existence' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION:nk]' value='388' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:NAT&apos;L ASSOC STRUCTURE:nk]' value='Association Structure'>
+              <formatted-text>
+                <run>Association Structure</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:NAT&apos;L ASSOC STRUCTURE:nk]' />
+              <size column='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:YEARS IN EXISTENCE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION:nk]</rows>
+        <cols>[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='50000'>
+            <zone h='49000' id='3' type='layout-basic' w='82400' x='800' y='50000'>
+              <zone h='49000' id='7' name='Structure' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='49000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='50000'>
+              <zone h='13250' id='8' name='Structure' pane-specification-id='3' param='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:NAT&apos;L ASSOC STRUCTURE:nk]' type='color' w='16000' x='83200' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='49000' id='1' name='Assc Type' w='82400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='6' name='Assc Type' pane-specification-id='3' param='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION TYPE:nk]' type='color' w='16000' x='83200' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Large Membership Associations in the US</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='435' />
+        </style-rule>
+      </style>
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone fixed-size='79' h='8195' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='86722' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='12448'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Large Membership Associations by Type and Years in Existence' captured-sheet='Assc Type' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='Assc Type'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:FOUNDING YEAR:qk]' field-type='quantitative' major-origin='0' major-spacing='100' max='2000' min='1700' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Large Membership Associations by Structure and Years in Existence' captured-sheet='Structure' id='2' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Story 2' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Assc Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:ASSOCIATION TYPE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Structure'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0r7e62z1mqcbiu1b6dici0sv0e8e].[none:NAT&apos;L ASSOC STRUCTURE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Story 2'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Assc Type' />
+        <viewpoint name='Structure' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+  </windows>
+</workbook>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Let's Make a Map</title>
+        <script src="https://d3.js.org/d3.v4.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+    </head>
+<body>
+<svg id="my-map"></svg>
+    <script>
+        
+        d3.queue()
+            .defer(d3.csv, "/data/csvData.csv");
+            .defer(d3.csv, "/data/countryNames.csv");
+            .defer(d3.json, "/data/world.json");
+            .awaitAll(function(error, dataArray) {
+                var data = dataArray[0];
+                var names = dataArray[1];
+                var countryTopojson = dataArray[2];
+                console.log(countryTopojson);
+                var geoJSON = topoJSON.feature(countryTopojson, countryTopojson.objects.countries);
+                console.log(geoJSON);
+                var projection = d3.geoMercator()
+                    .fitSize([window.innerWidth, 600], geoJSON);
+                var path = d3.geoPath()
+                    .projection(projection);
+
+                var svg = d3.select("#my-map");
+                    .attr("width", window.innerWidth + "px")
+                    .attr("height", "600px")
+
+                var countries = svg.selectAll("path")
+                    .data(geoJSON.features);
+
+                countries.enter().append("path")
+                    .attr("d", function(feature) {
+                        return path(feature);
+                });
+
+        </script>
+</body>
+</html>
