@@ -3,19 +3,34 @@
     <head>
         <meta charset="utf-8" />
         <title>Let's Make a Map</title>
-        <script src="https://d3.js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="https://unpkg.com/topojson@3"></script>
     </head>
-<body>
-<svg id="my-map"></svg>
-    <script>
+    <body>
+        <svg id="my-map"></svg>
+
+        <script>
+
+            var width = window.innerWidth;
+            var height = 700;
         
         d3.queue()
-            .defer(d3.csv, "/data/csvData.csv");
-            .defer(d3.csv, "/data/countryNames.csv");
-            .defer(d3.json, "/data/world.json");
+            .defer(d3.csv, "/data/csvData.csv")
+            .defer(d3.csv, "/data/countryNames.csv")
+            .defer(d3.json, "/data/world.json")
             .awaitAll(function(error, dataArray) {
                 var data = dataArray[0];
+                data.forEach(function(d) {
+                    d.export = parseFloat(d.export);
+                });
+                var latestData = data.filter(function(d) {
+                    return d.year == "2018";
+                });
+
+                var colorScale = d3.scaleLinear()
+                    .domain(domain)
+                    .range(["green", "blue"])
+
                 var names = dataArray[1];
                 var countryTopojson = dataArray[2];
                 console.log(countryTopojson);
@@ -26,9 +41,9 @@
                 var path = d3.geoPath()
                     .projection(projection);
 
-                var svg = d3.select("#my-map");
+                var svg = d3.select("#my-map")
                     .attr("width", window.innerWidth + "px")
-                    .attr("height", "600px")
+                    .attr("height", "600px");
 
                 var countries = svg.selectAll("path")
                     .data(geoJSON.features);
@@ -36,7 +51,20 @@
                 countries.enter().append("path")
                     .attr("d", function(feature) {
                         return path(feature);
+                })
+                .attr("fill", function(feature) {
+                    var matches = latestData.filter(function(d) {
+                        return d.country == feature.id.toLowerCase();
+                    });
+                    if (matches.length > 0) {
+                        return colorScale(matches[0].export);
+                    }
+                    else {
+                        return "rgb(200,200,200)";
+                    }
                 });
+                
+            });
 
         </script>
 </body>
