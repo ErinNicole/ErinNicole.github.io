@@ -37,7 +37,12 @@
     <!--Loading Data-->    
         <script src="LoadCivicData.js"></script>
 
-    <!--Creating SVG Container for Interactive Bar Chart-->    
+    <!--Creating SVG Container for First Interactive Bar Chart (sort on click)-->
+    <!--Tooltip-->
+        <div id="tooltip" class="hidden">
+            <p><span id="value">100</span>%</p>
+        </div>
+    <!--Container-->
         <svg class="container" width="1200" height="400">
                 <rect x="265px" y="50px" width="675px" height="300px" fill="rgb(254,255,243)" stroke="rgb(0,0,0)" stroke-width="1px"></rect>      
         </svg>

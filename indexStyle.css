@@ -115,3 +115,37 @@ pre {
         padding-left: 250px;
         padding-right: 250px;
     }
+
+    svg {
+        border: 1px dotted rgb(162 170 173);
+        padding: 1em;
+        
+        rect {
+          fill: black;
+          
+        &:hover {
+            fill: orange;
+          }
+        }
+      }
+      
+#tooltip {
+        font-family: Helvetica;
+        font-size: 11px;
+        font-weight: bold;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: .25em;
+        pointer-events: none;
+        position: absolute;
+        -webkit-box-shadow: 4px 4px 10px rgb(0, 0, 0);
+        box-shadow: 4px 4px 10px rgb(0, 0, 0);
+        
+        & p {
+          margin: 0 1em;
+        }
+      }
+      
+.hidden {
+        display: none;
+      }

@@ -27,6 +27,10 @@
                     return d.year == "2018";
                 });
 
+                var domain = d3.extent(latestData, function(d) {
+                    return d.export;
+                })
+
                 var colorScale = d3.scaleLinear()
                     .domain(domain)
                     .range(["green", "blue"])
@@ -34,7 +38,7 @@
                 var names = dataArray[1];
                 var countryTopojson = dataArray[2];
                 console.log(countryTopojson);
-                var geoJSON = topoJSON.feature(countryTopojson, countryTopojson.objects.countries);
+                var geoJSON = topojson.feature(countryTopojson, countryTopojson.objects.countries);
                 console.log(geoJSON);
                 var projection = d3.geoMercator()
                     .fitSize([window.innerWidth, 600], geoJSON);
