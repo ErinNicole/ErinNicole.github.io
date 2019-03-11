@@ -119,15 +119,13 @@ pre {
     svg {
         border: 1px dotted rgb(162 170 173);
         padding: 1em;
-        
-        rect {
-          fill: black;
-          
-        &:hover {
-            fill: orange;
-          }
+        }  
+        svg rect {
+          fill: rgb(0,0,0);
         }
-      }
+        svg rect:hover {
+            fill: orange;
+        }
       
 #tooltip {
         font-family: Helvetica;
@@ -140,10 +138,6 @@ pre {
         position: absolute;
         -webkit-box-shadow: 4px 4px 10px rgb(0, 0, 0);
         box-shadow: 4px 4px 10px rgb(0, 0, 0);
-        
-        & p {
-          margin: 0 1em;
-        }
       }
       
 .hidden {
