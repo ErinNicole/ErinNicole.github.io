@@ -12,10 +12,8 @@ var dataSetOne = ["red", "redorange", "orange"];
 var dataSetTwo = ["green","steelblue","blue","purple","rebeccapurlple"];
 
 function changeColor(color){
-    svg.selectAll(".dot").attr("fill", function(){
-        return dataSetOne();
+    svg.selectAll(".dot").attr("fill", color);
     }
-}
 
 function dance() {
     svg.selectAll(".dot").attr("cx", function() {

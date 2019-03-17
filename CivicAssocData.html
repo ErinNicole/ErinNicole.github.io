@@ -5,6 +5,13 @@
         <title>A Nation of Organizers</title>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="indexStyle.css">
+        <style>
+            img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        </style>
     </head>
 
     <body>
@@ -23,28 +30,32 @@
                 <h3>Visualizations by Erin Shackelford</h3>
                 <br>
 -->                
-            <style>
-                img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                }
-            </style>
-
-                <img src="CivicAssociationsHeader.jpg" class=center width="700" height="450">
+                <img src="CivicAssociationsHeader.jpg" class=center height="450">
             </div>
        
-    <!--Loading Data-->    
-        <script src="LoadCivicData.js"></script>
+    
 
     <!--Creating SVG Container for First Interactive Bar Chart (sort on click)-->
-    <!--Tooltip-->
+    <!--Tooltip
         <div id="tooltip" class="hidden">
             <p><span id="value">100</span>%</p>
-        </div>
-    <!--Container-->
-        <svg class="container" width="1200" height="400">
-                <rect x="265px" y="50px" width="675px" height="300px" fill="rgb(254,255,243)" stroke="rgb(0,0,0)" stroke-width="1px"></rect>      
+        </div>-->
+
+    <!--Creating SVG Container for Interactive Visualization 2-->    
+    <svg class="container" width="1200" height="400">
+            <rect x="270px" y="20px" width="560px" height="10px" fill="rgb(227,38,42)"></rect>    
+            <rect x="270px" y="35px" width="550px" height="10px" fill="rgb(41,171,226)"></rect>
+            <rect x="270px" y="50px" width="540px" height="10px" fill="rgb(227,38,42)"></rect>    
+            <rect x="270px" y="65px" width="530px" height="10px" fill="rgb(41,171,226)"></rect>
+            <rect x="270px" y="80px" width="520px" height="10px" fill="rgb(227,38,42)"></rect>    
+            <rect x="270px" y="95px" width="510px" height="10px" fill="rgb(41,171,226)"></rect>
+            <rect x="270px" y="110px" width="500px" height="10px" fill="rgb(227,38,42)"></rect>    
+            <rect x="270px" y="125px" width="490px" height="10px" fill="rgb(41,171,226)"></rect>
+            <rect x="270px" y="140px" width="480px" height="10px" fill="rgb(227,38,42)"></rect>    
+            <rect x="270px" y="155px" width="470px" height="10px" fill="rgb(41,171,226)"></rect>
+            <rect x="270px" y="170px" width="460px" height="10px" fill="rgb(227,38,42)"></rect>    
+            <rect x="270px" y="185px" width="450px" height="10px" fill="rgb(41,171,226)"></rect>
+
         </svg>
 
     <!--Narrative-->
@@ -81,6 +92,9 @@
         <h3><a href="index.html">Back to Home</a></h3>
         </div>
         </div> 
+
+        <!--Loading Data-->    
+        <script src="LoadCivicData.js"></script>
 
     </body>
 

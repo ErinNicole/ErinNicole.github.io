@@ -121,7 +121,7 @@ svg {
         border: 1px dotted rgb(162 170 173);
         padding: 1em;
         }  
-svg rect {
+/*svg rect {
           fill: rgb(0,0,0);
         }
 
@@ -144,4 +144,4 @@ svg rect:hover {
       
 .hidden {
         display: none;
-        }
+        }*/
