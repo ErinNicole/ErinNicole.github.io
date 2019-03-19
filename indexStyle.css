@@ -121,6 +121,10 @@ svg {
         border: 1px dotted rgb(162 170 173);
         padding: 1em;
         }  
+
+.bar-chart {
+        background-color: rgb(162 170 173);
+        }        
 /*svg rect {
           fill: rgb(0,0,0);
         }

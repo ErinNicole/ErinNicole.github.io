@@ -8,11 +8,12 @@ title
     .style("font-family", "Helvetica");
 
 var svg = d3.select("svg");
-var dataSetOne = ["red", "redorange", "orange"];
-var dataSetTwo = ["green","steelblue","blue","purple","rebeccapurlple"];
+/*var dataSetOne = ["red", "redorange", "orange"];
+var dataSetTwo = ["green","steelblue","blue","purple","rebeccapurlple"];*/
 
 function changeColor(color){
-    svg.selectAll(".dot").attr("fill", color);
+    svg.selectAll(".dot").attr("fill", color)
+    return color.random();
     }
 
 function dance() {
@@ -42,7 +43,7 @@ function redrawCircles() {
         .attr("r", 20);
 
     newCircles.attr("r", function(d) {
-        return d.height /2;
+        return d.height / 2;
     });
     
     newCircles.exit().remove();
