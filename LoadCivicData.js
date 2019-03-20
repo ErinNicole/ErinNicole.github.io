@@ -2,40 +2,68 @@ console.log("Large Civic Associations")
 var svgWidth = 1200;
 var svgHeight = 400;
 
-var svg = d3.select('svg')
+var svg = d3.selectAll('.barChart')
     .attr("width", svgWidth)
-    .attr("height", svgHeight)
-    .attr("class", "barChart");
+    .attr("height", svgHeight);
 
 //Load the data
-d3.csv("data/CivicAssocData.csv", function(error, data) {
-  console.log("csv:", data)
-barChart(data)
-});
+//d3.csv("data/CivicAssocData.csv", function(error, data) {
+//  console.log("csv:", data)
+//});
 
-function barChart(dataset){
-}
+var data = [1733, 1819, 1826, 1828, 1833];
 
-var barPadding = 5;
-var barWidth = (svgWidth / dataset.length);
-var a = parseFloat("FOUNDING YEAR");
-var b = parseFloat("ENDING YEAR");
+var xScale = d3.scaleLinear()
+.domain([1700, 1850])
+.range([50, window.innerWidth - 100]);
 
-var barChart = svg.selectAll("rect")
-  .data(dataset)
-  .enter()
-  .append("rect")
-  .attr("y", function(d) {
-    return svgHeight - d
-  })
-  .attr("height", function(d) {
-    return d;
+//function barChart(dataset){
+//  var barWidth = (svgWidth / dataset.length);
+//var a = parseFloat("FOUNDING YEAR");
+//var b = parseFloat("ENDING YEAR");
+
+var barChart = svg.select("barChart")
+var rect = svg.selectAll("rect")
+  .data(data)
+var barWidth = 10
+var barPadding = 5
+
+function barChart() {
+  rect.enter().append("rect")  
+    .attr("y", function(d) {
+      return svgHeight - d
+    })
+    .attr("height", function(d) {
+      return d;
+    })
+    .attr("width", barWidth - barPadding)
+    .attr("transform", function (d, i) {
+    });
+  }
+
+d3.selectAll("rect")
+.on("click", function(d) {
+    console.log(d);
 })
-.attr("width", barWidth - barPadding)
-.attr("transform", function (d, i) {
-  var xCoordinate = barWidth * i;
-  return "translate("+ xCoordinate +")";
+.on("mousemove", function(d) {
+    var mouse = d3.mouse(this);
+    d3.select("#tooltip")
+        .style("display", "block")
+        .html("<h1>" + d + "</h1>")
+        .style("left", mouse[0] + "px")
+        .style("top", mouse[1] - 50 + "px");
+})
+.on("mouseout", function(d) {
+    d3.select("#tooltip")
+        .style("display", "none")
 });
+
+var axis = d3.axisBottom(xScale);
+d3.select("#xAxis").call(axis);
+
+
+//var xCoordinate = barWidth * i;
+//  return "translate("+ xCoordinate +")";
 
 
 
