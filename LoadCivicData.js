@@ -21,8 +21,8 @@ var xScale = d3.scaleLinear()
 
 //function barChart(data) {
 var barWidth = (svgWidth / data.length);
-var a = parseFloat("FOUNDING YEAR");
-var b = parseFloat("ENDING YEAR");
+//var a = parseFloat("FOUNDING YEAR");
+//var b = parseFloat("ENDING YEAR");
 
 var barChart = svg.select("barChart")
 var rect = svg.selectAll("rect")
@@ -62,8 +62,8 @@ d3.selectAll("rect")
 var axis = d3.axisBottom(xScale);
 d3.select("#xAxis").call(axis);
 
-var xCoordinate = barWidth * i;
-  return "translate("+ xCoordinate +")";
+//var xCoordinate = barWidth * i;
+//  return "translate("+ xCoordinate +")";
 }
 
 
