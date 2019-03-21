@@ -1,34 +1,36 @@
+//Load the data
+d3.csv("data/CivicAssocData.csv", function(error, data) {
+  console.log("csv:", data);
+  barChart(data);
+});
+
 console.log("Large Civic Associations")
 var svgWidth = 1200;
 var svgHeight = 400;
 
+function barChart(data) {
 var svg = d3.selectAll('.barChart')
     .attr("width", svgWidth)
     .attr("height", svgHeight);
 
-//Load the data
-//d3.csv("data/CivicAssocData.csv", function(error, data) {
-//  console.log("csv:", data)
-//});
-
-var data = [1733, 1819, 1826, 1828, 1833];
+//var data = [1733, 1819, 1826, 1828, 1833];
 
 var xScale = d3.scaleLinear()
 .domain([1700, 1850])
 .range([50, window.innerWidth - 100]);
 
-//function barChart(dataset){
-//  var barWidth = (svgWidth / dataset.length);
-//var a = parseFloat("FOUNDING YEAR");
-//var b = parseFloat("ENDING YEAR");
+//function barChart(data) {
+var barWidth = (svgWidth / data.length);
+var a = parseFloat("FOUNDING YEAR");
+var b = parseFloat("ENDING YEAR");
 
 var barChart = svg.select("barChart")
 var rect = svg.selectAll("rect")
   .data(data)
-var barWidth = 10
+//var barWidth = 10
 var barPadding = 5
 
-function barChart() {
+//function barChart() {
   rect.enter().append("rect")  
     .attr("y", function(d) {
       return svgHeight - d
@@ -39,7 +41,6 @@ function barChart() {
     .attr("width", barWidth - barPadding)
     .attr("transform", function (d, i) {
     });
-  }
 
 d3.selectAll("rect")
 .on("click", function(d) {
@@ -61,9 +62,9 @@ d3.selectAll("rect")
 var axis = d3.axisBottom(xScale);
 d3.select("#xAxis").call(axis);
 
-
-//var xCoordinate = barWidth * i;
-//  return "translate("+ xCoordinate +")";
+var xCoordinate = barWidth * i;
+  return "translate("+ xCoordinate +")";
+}
 
 
 
@@ -85,7 +86,4 @@ d3.select("#xAxis").call(axis);
 
 // Exit...
 //  rectOne.exit().remove();
-  
 
-
-  
