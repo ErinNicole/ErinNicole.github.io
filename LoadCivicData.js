@@ -16,6 +16,18 @@ function barChart(barData) {
     .attr("width", svgWidth)
     .attr("height", svgHeight);
 
+  var minYear = d3.min(barData, function(d) {
+      return parseFloat(d["FOUNDING YEAR"])
+    });
+
+  var maxYear = d3.max(barData, function(d) {
+      return parseFloat(d["ENDING YEAR"])
+    });
+  
+  var xScale = d3.scaleLinear()
+    .domain([minYear, maxYear])
+    .range([0, window.svgWidth]);  
+
   var bars = svg.selectAll('rect')
     .data(barData);
 
@@ -29,18 +41,13 @@ function barChart(barData) {
       return i * 20;
     })
     .attr('x', function(d, i) {
-      console.log(d)
-        return d["FOUNDING YEAR"];
+      return xScale(parseFloat(d["FOUNDING YEAR"]));
     })
+
   var dataExtent = d3.extent(barData, function(d) {
       return d["FOUNDING YEAR"];
-    });
-  var xScale = d3.scaleLinear()
-    .domain(dataExtent)
-    .range([0, window.innerWidth]);  
-
+      });
   }
-
 
 
 
