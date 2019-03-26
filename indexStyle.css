@@ -2,8 +2,8 @@ body {
         background-color: white;
         }
 
-/* unvisited link */
-a:link {
+  /* unvisited link */
+  a:link {
     color:rgb(162 170 173);
         }
   
@@ -85,6 +85,7 @@ p {
         text-align: left;
         font-family: Garamond; 
         font-size: 18px; 
+        color: rgb(41, 127, 202);
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal; 
@@ -118,12 +119,25 @@ pre {
         }
 
 svg {
-        border: 1px dotted rgb(162 170 173);
-        padding: 1em;
+        text-align: center; 
+        font-family: Helvetica; 
+        font-size: 20px; 
+        color: rgb(41, 127, 202)        ;
+        font-style: normal; 
+        font-variant: normal; 
+        font-weight: normal;
+        border: 1px dotted rgb(208 211 212);
+        padding: 2em;
         }  
 
 .barChart {
-        background-color: rgb(162 170 173);
+        text-align: center; 
+        font-family: Helvetica; 
+        font-size: 20px; 
+        font-style: normal; 
+        font-variant: normal; 
+        font-weight: normal;
+        background-color: rgb(208 211 212);
         }        
 /*svg rect {
           fill: rgb(0,0,0);
