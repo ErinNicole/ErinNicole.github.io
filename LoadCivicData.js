@@ -39,21 +39,21 @@ function barChart(barData) {
     return d["YEARS IN EXISTENCE"];
 //        return d["YEARS IN EXISTENCE"] * scaleFactor;
     })
-    .text(function(d) {return (parseFloat(d["ASSOCIATION"]))
-    })
     .attr('y', function(d, i) {
       return i * 10;
     })
     .attr('x', function(d, i) {
       return xScale(parseFloat(d["FOUNDING YEAR"]));
     })
+    .attr("fill", "steelblue");
 
     var axis = d3.axisBottom(xScale);
      d3.select("#xAxis").call(axis);
 
     var xCoordinate = svgWidth * i;
       return "translate("+ xCoordinate +")";
-}
+
+
 
 
 //  var dataExtent = d3.extent(barData, function(d) {
@@ -75,4 +75,4 @@ function barChart(barData) {
 //    d3.select("#tooltip")
 //        .style("display", "none")
 //  });
-
+}
