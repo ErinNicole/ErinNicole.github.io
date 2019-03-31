@@ -46,7 +46,7 @@ function barChart(barData) {
     })
     .on("mousemove", function(d) {
       var mouse = d3.mouse(document.body);
-      d3.select("#tooltip")
+      d3.select("tooltip")
           .style("display", "block")
           .html("<p>" + d["ASSOCIATION"] + "</p>")
           .style("left", mouse[0] + 20 + "px")
@@ -61,7 +61,7 @@ function barChart(barData) {
 //    .domain(d["ASSOCIATION TYPE"])
 //    .range(['#ddd', 'red'])
 
-    .attr("fill", "steelblue");
+    .attr("fill", "#297fca");
 
   var labels = svg.selectAll('text')
     .data(barData);

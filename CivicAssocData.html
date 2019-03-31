@@ -52,26 +52,26 @@
                     visibility: visible;
                     }
 
-/* Top tooltip 
-.tooltip .tooltiptext {                
-        width: 120px;
-        bottom: 100%;
-        left: 50%;
-        margin-left: -60px;
-        }    
+            /* Top tooltip 
+            .tooltip .tooltiptext {                
+                    width: 120px;
+                    bottom: 100%;
+                    left: 50%;
+                    margin-left: -60px;
+                    }    
 
-/* Create bottom tooltip arrow 
-.tooltip .tooltiptext::after {
-        content: " ";
-        position:absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: black transparent transparent transparent;
-        }
-*/
+            /* Create bottom tooltip arrow 
+            .tooltip .tooltiptext::after {
+                    content: " ";
+                    position:absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: black transparent transparent transparent;
+                    }
+            */
         </style>
     </head>
 
@@ -80,7 +80,7 @@
         <div id="wrapper">
         <div id="headline">                
                 <img src="CivicAssociationsHeader.jpg" class=center height="450">
-        <div id="tooltip">
+        <div id="tooltip" class="hidden">
             <p><span id="value">100</span>%</p>
         </div>
 
@@ -113,6 +113,7 @@
         </g>
         <g id="yAxis" transform="translate(0, 0)">        
         </g>
+        <g id="labels"></g>
     </svg>
 
     <script src="LoadCivicData.js"></script>
