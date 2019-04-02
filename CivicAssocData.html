@@ -26,52 +26,6 @@
                 margin: 0;
             }
 
-            /* Tooltip container */
-            .tooltip {
-                    position: relative;
-                    display: inline-block;
-                    border-bottom: 1px dotted black;
-                    }
-            /* Tooltip text */
-            .tooltip .tooltiptext {
-                    visibility: hidden;
-                    width: 120px;
-                    background-color: black;
-                    color: #fff;
-                    text-align: center;
-                    padding: 5px 0;
-                    border-radius: 6px;
-
-            /* Position the tooltip text */
-                    position:  absolute;
-                    z-index: 1;
-                    }
-
-            /* Show the tooltip text when you mouse over the tooltip container */
-            .tootip:hover .tooltiptext {
-                    visibility: visible;
-                    }
-
-            /* Top tooltip 
-            .tooltip .tooltiptext {                
-                    width: 120px;
-                    bottom: 100%;
-                    left: 50%;
-                    margin-left: -60px;
-                    }    
-
-            /* Create bottom tooltip arrow 
-            .tooltip .tooltiptext::after {
-                    content: " ";
-                    position:absolute;
-                    top: 100%;
-                    left: 50%;
-                    margin-left: -5px;
-                    border-width: 5px;
-                    border-style: solid;
-                    border-color: black transparent transparent transparent;
-                    }
-            */
         </style>
     </head>
 
@@ -80,17 +34,10 @@
         <div id="wrapper">
         <div id="headline">                
                 <img src="CivicAssociationsHeader.jpg" class=center height="450">
-        <div id="tooltip" class="hidden">
-            <p><span id="value">100</span>%</p>
         </div>
 
-       
-
-
-    <!--Tooltip
-        <div id="tooltip" class="hidden">
-            <p><span id="value">100</span>%</p>
-        </div>-->
+<!--Tooltip Div-->
+        <div id="tooltip" class="hidden"></div>
 
     <!--Creating SVG Container for Interactive Visualization 2-->    
     <!--Narrative-->

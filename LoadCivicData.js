@@ -8,7 +8,6 @@ console.log("Large Civic Associations")
 
 var svgWidth = 800;
 var svgHeight = 500;
-//var scaleFactor = .1;
 
 //Draw the Bar Chart
 function barChart(barData) {
@@ -27,7 +26,7 @@ function barChart(barData) {
   
   var xScale = d3.scaleLinear()
     .domain([minYear, maxYear])
-    .range([0, svgWidth]);
+    .range([0, svgWidth - 10]);
 
   var bars = svg.selectAll('rect')
     .data(barData);
@@ -46,8 +45,9 @@ function barChart(barData) {
     })
     .on("mousemove", function(d) {
       var mouse = d3.mouse(document.body);
-      d3.select("tooltip")
-          .style("display", "block")
+      d3.select("#tooltip")
+          .style("display", "inline-block")
+          .style("postion", "relative")
           .html("<p>" + d["ASSOCIATION"] + "</p>")
           .style("left", mouse[0] + 20 + "px")
           .style("top", mouse[1] - 50 + "px");
@@ -61,9 +61,9 @@ function barChart(barData) {
 //    .domain(d["ASSOCIATION TYPE"])
 //    .range(['#ddd', 'red'])
 
-    .attr("fill", "#297fca");
+        .attr("fill", "#297fca");
 
-  var labels = svg.selectAll('text')
+  var labels = svg.selectAll("text")
     .data(barData);
 
   labels.enter().append("text")
@@ -78,5 +78,5 @@ function barChart(barData) {
   var xAxis = d3.axisBottom(xScale)
     // .tickFormat;
      d3.select("#xAxis").call(xAxis);
-
 }
+
