@@ -26,7 +26,7 @@ function barChart(barData) {
   
   var xScale = d3.scaleLinear()
     .domain([minYear, maxYear])
-    .range([0, svgWidth - 10]);
+    .range([0, svgWidth - 15]);
 
   var bars = svg.selectAll('rect')
     .data(barData);
@@ -48,7 +48,7 @@ function barChart(barData) {
       d3.select("#tooltip")
           .style("display", "inline-block")
           .style("postion", "relative")
-          .html("<p>" + d["ASSOCIATION"] + "</p>")
+          .html("<div class='tooltip-title'>" + d["ASSOCIATION"] + "<br>" + " Founding Year:  " + d["FOUNDING YEAR"] + "<br>" + " Ending Year:  " + d["ENDING YEAR"] + "</br>" + "</div>")
           .style("left", mouse[0] + 20 + "px")
           .style("top", mouse[1] - 50 + "px");
     })
@@ -63,20 +63,20 @@ function barChart(barData) {
 
         .attr("fill", "#297fca");
 
-  var labels = svg.selectAll("text")
-    .data(barData);
+//  var labels = svg.selectAll("text")
+//    .data(barData);
 
-  labels.enter().append("text")
-    .text(function(d) {
-      return d["ASSOCIATION"];
-    })
-    .attr('y', function(d, i) {
-      return i * 10;
-    })
-    .attr('x', 0);
+//  labels.enter().append("text")
+//    .text(function(d) {
+//      return d["ASSOCIATION"];
+//    })
+//    .attr('y', function(d, i) {
+//      return i * 10;
+//    })
+//    .attr('x', 0);
 
   var xAxis = d3.axisBottom(xScale)
-    // .tickFormat;
-     d3.select("#xAxis").call(xAxis);
+      .tickFormat(d3.format("d"));
+      d3.select("#xAxis").call(xAxis);
 }
 
