@@ -8,6 +8,7 @@ console.log("Large Civic Associations")
 
 var svgWidth = 800;
 var svgHeight = 500;
+var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 //Draw the Bar Chart
 function barChart(barData) {
@@ -43,12 +44,16 @@ function barChart(barData) {
     .attr('x', function(d, i) {
       return xScale(parseFloat(d["FOUNDING YEAR"]))
     })
+    .attr("fill", function(d) {
+        return color(d["ASSOCIATION TYPE"]);
+    })
+    
     .on("mousemove", function(d) {
       var mouse = d3.mouse(document.body);
       d3.select("#tooltip")
           .style("display", "inline-block")
           .style("postion", "relative")
-          .html("<div class='tooltip-title'>" + d["ASSOCIATION"] + "<br>" + " Founding Year:  " + d["FOUNDING YEAR"] + "<br>" + " Ending Year:  " + d["ENDING YEAR"] + "</br>" + "</div>")
+          .html("<div class='tooltip-title'>" + d["ASSOCIATION"] + "<br>" + " Association Type:  " + d["ASSOCIATION TYPE"] + "<br>" + " Founding Year:  " + d["FOUNDING YEAR"] + "<br>" + " Ending Year:  " + d["ENDING YEAR"] + "</br>" + "</div>")
           .style("left", mouse[0] + 20 + "px")
           .style("top", mouse[1] - 50 + "px");
     })
@@ -56,12 +61,12 @@ function barChart(barData) {
       d3.select("#tooltip")
           .style("display", "none")
     })
-
+    
 //  var colorScale = d3.scale.ordinal()
 //    .domain(d["ASSOCIATION TYPE"])
 //    .range(['#ddd', 'red'])
 
-        .attr("fill", "#297fca");
+//     .attr("fill", "#297fca");
 
 //  var labels = svg.selectAll("text")
 //    .data(barData);
