@@ -71,9 +71,10 @@ h3 {
         } 
 
 h4 { 
-        text-align: left;
+        text-align: center;
         font-family: Helvetica; 
-        font-size: 16px; 
+        font-size: 20px; 
+        color: #297fca;
         font-style: normal; 
         font-variant: normal; 
         font-weight: bold; 
@@ -93,6 +94,7 @@ p {
         letter-spacing: 1px;
         padding-left: 250px;
         padding-right: 250px;
+        margin-bottom: 50px;
         } 
     
 blockquote { 
@@ -120,38 +122,39 @@ pre {
 svg {
         text-align: center; 
         font-family: Helvetica; 
-        font-size: 12px; 
+        font-size: 16px; 
         color: #297fca;
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal;
-        border: 1px dotted rgb(208 211 212);
+/*        border: 1px dotted rgb(208 211 212); */
         padding: 2em;
+        margin-bottom: 10px;
         }  
 
-.barChart {
+#xAxis .tick text {
         text-align: center; 
         font-family: Helvetica; 
-        font-size: 9px; 
+        font-size: 10px; 
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal;
-        color: purple;
-        background-color: rgb(208 211 212);
+        fill: #297fca;
+/*        background-color: rgb(208 211 212); */
         }        
 
-.labels {
+#labels {
         text-align: left;
         font-family: Helvetica;
         font-size:  9px;
         font-style: normal;
         font-variant: normal;
         font-weight: normal;
-        color: green;
+        fill: #297fca;
 }
 
 svg rect:hover {
-            fill: #fff;
+            fill: rgb(208 211 212);
         }
 
       

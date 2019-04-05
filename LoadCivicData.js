@@ -6,9 +6,13 @@ d3.csv("data/CivicAssocData.csv", function(error, csvData) {
 
 console.log("Large Civic Associations")
 
-var svgWidth = 800;
-var svgHeight = 500;
-var color = d3.scaleOrdinal(d3.schemeCategory10);
+var svgWidth = 1400;
+var svgHeight = 600;
+
+//var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var color = d3.scaleOrdinal()
+    .range(["rgb(89, 190, 201)", "rgb(0, 132, 213)", "rgb(214, 0, 28)", "rgb(41, 127, 202)", "rgb(124, 37, 41)", "rgb(255, 205, 0)", "rgb(255, 143, 28)", "rgb(0, 170, 19)", "rgb(40, 97, 64)", "rgb(51, 0, 114)", "rgb(23, 74, 91)", "rgb(170, 219, 30)"]);
 
 //Draw the Bar Chart
 function barChart(barData) {
@@ -27,19 +31,32 @@ function barChart(barData) {
   
   var xScale = d3.scaleLinear()
     .domain([minYear, maxYear])
-    .range([0, svgWidth - 15]);
+    .range([10, 650]);
+
+  var labels = svg.select("#labels").selectAll("text")
+    .data(barData);
+
+  labels.enter().append("text")
+    .text(function(d) {
+      return d["ASSOCIATION"];
+    })
+    .attr('y', function(d, i) {
+      return i * 12;
+    })
+    .attr('dy', 7)
+    .attr('x', 670);
 
   var bars = svg.selectAll('rect')
     .data(barData);
 
   bars.enter().append("rect")
-    .attr("height", 5)
+    .attr("height", 8)
     .attr("width", function(d) {
       console.log(d)
       return xScale(minYear + parseFloat(d["YEARS IN EXISTENCE"]));
     })
     .attr('y', function(d, i) {
-      return i * 10;
+      return i * 12;
     })
     .attr('x', function(d, i) {
       return xScale(parseFloat(d["FOUNDING YEAR"]))
@@ -61,27 +78,9 @@ function barChart(barData) {
       d3.select("#tooltip")
           .style("display", "none")
     })
-    
-//  var colorScale = d3.scale.ordinal()
-//    .domain(d["ASSOCIATION TYPE"])
-//    .range(['#ddd', 'red'])
-
-//     .attr("fill", "#297fca");
-
-//  var labels = svg.selectAll("text")
-//    .data(barData);
-
-//  labels.enter().append("text")
-//    .text(function(d) {
-//      return d["ASSOCIATION"];
-//    })
-//    .attr('y', function(d, i) {
-//      return i * 10;
-//    })
-//    .attr('x', 0);
 
   var xAxis = d3.axisBottom(xScale)
-      .tickFormat(d3.format("d"));
-      d3.select("#xAxis").call(xAxis);
+    .tickFormat(d3.format("d"));
+    d3.select("#xAxis").call(xAxis);
 }
 
