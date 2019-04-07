@@ -4,7 +4,7 @@ body {
 
   /* unvisited link */
   a:link {
-    color:rgb(162 170 173);
+    color:rgb(248 144 165);
         }
   
   /* visited link */
@@ -14,12 +14,12 @@ body {
   
   /* mouse over link */
   a:hover {
-    color: rgb(124 37 41);
+    color: #297fca;
         }
   
   /* selected link */
   a:active {
-    color:rgb(124 37 41);
+    color:#297fca;
         }
 
 * {
@@ -47,6 +47,7 @@ h1 {
         font-weight: bold; 
         padding-left: 250px;
         padding-right: 250px;
+        margin-bottom: 20px;
         } 
 h2 { 
         text-align: center;
@@ -57,6 +58,7 @@ h2 {
         font-weight: bold; 
         padding-left: 250px;
         padding-right: 250px;
+        margin-bottom: 20px;
         } 
 
 h3 { 
@@ -68,6 +70,7 @@ h3 {
         font-weight: normal; 
         padding-left: 250px;
         padding-right: 250px;
+        margin-bottom: 20px;
         } 
 
 h4 { 
@@ -94,7 +97,7 @@ p {
         letter-spacing: 1px;
         padding-left: 250px;
         padding-right: 250px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         } 
     
 blockquote { 
