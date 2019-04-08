@@ -11,7 +11,8 @@ var svgWidth = 1400;
 var svgHeight = 600;
 
 var color = d3.scaleOrdinal()
-    .range(["rgb(89, 190, 201)", "rgb(0, 132, 213)", "rgb(214, 0, 28)", "rgb(41, 127, 202)", "rgb(124, 37, 41)", "rgb(255, 205, 0)", "rgb(255, 143, 28)", "rgb(0, 170, 19)", "rgb(40, 97, 64)", "rgb(51, 0, 114)", "rgb(23, 74, 91)", "rgb(170, 219, 30)"]);
+     .range(["#3399ff", "#66ccff", "#99cccc", "#cccccc", "#6666ff", "#9999ff", "#cc99ff", "#ccccff", "#993399", "#ff6699", "#ff3333", "#cc3333"]);
+
 
 //Draw the Bar Chart
 function barChart(barData) {
