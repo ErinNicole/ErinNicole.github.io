@@ -25,6 +25,15 @@
             h1 {
                 margin: 0;
             }
+            .grid line {
+                stroke: lightgrey;
+                stroke-opacity: 0.7;
+                shape-rendering: crispEdges;
+            }
+
+            .grid path {
+                stroke-width: 0;
+            }
 
         </style>
     </head>
@@ -59,6 +68,7 @@
         <g id="yAxis" transform="translate(0, 0)">        
         </g>
         <g id="labels"></g>
+        <g id="grid" transform="translate(0, svgHeight)"></g>
     </svg>
 
     <svg class="barChartKey" width="100%">
