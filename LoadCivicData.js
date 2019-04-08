@@ -83,13 +83,13 @@ function barChart(barData) {
     d3.select("#xAxis").call(xAxis);
 }
 
-//Creating Bar Chart Key
+ //Creating Bar Chart Key
 
-//d3.csv("data/CivicAssocData.csv", function(error, csvData) {
-  // var categories = d3.nest()
-  //     .key(function(d) { return d["ASSOCIATION TYPE"]; 
-  //   })
-  //     .entries(csvData);
+// d3.csv("data/CivicAssocData.csv", function(error, csvData) {
+//   var categories = d3.nest()
+//       .key(function(d) { return d["ASSOCIATION TYPE"]; 
+//     })
+//       .entries(csvData);
 
 function barChartKey(barData) {
   var svg = d3.selectAll('.barChartKey')
