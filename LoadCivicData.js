@@ -88,38 +88,39 @@ function barChart(barData) {
           .style("left", mouse[0] + 20 + "px")
           .style("top", mouse[1] - 50 + "px");
     })
-    .on("mouseout", function(d) {
-      d3.select("#tooltip")
+          .on("mouseout", function(d) {
+        d3.select("#tooltip")
           .style("display", "none")
     })
-
   //Creating the X Axis  
-  var xAxis = d3.axisBottom(xScale)
-    .tickFormat(d3.format("d"));
-    d3.select("#xAxis").call(xAxis);
+      var xAxis = d3.axisBottom(xScale)
+        .tickFormat(d3.format("d"));
+      d3.select("#xAxis").call(xAxis);
 }
   //Drawing gridlines in X Axis function
-function make_x_gridlines() {		
-  return d3.axisBottom(x)
-      .ticks(5)
+      function make_x_gridlines() {		
+        return d3.axisBottom(x)
+        .rects(5)
 }
-  var grid = svg.selectAll('tick')
-  .data(barData);
 
-  grid.enter().append("tick")
-  .attr("height", svgHeight)
-  .attr("width", 1)
-  .attr('y', axisBottom)
-  .attr('x', function(d, i) {
-    return make_x_gridlines()
+      var grid = svg.select("body").selectAll("svg")
+        .data(barData);
+
+      grid.enter().append("rect")
+        .attr("height", svgHeight)
+        .attr("width", 1)
+        .attr('y', axisBottom)
+        .attr('x', function(d, i) {
+        return make_x_gridlines()
   })
 
-svg.append("g")			
-    .attr("class", "grid")
-    .call(make_x_gridlines()
-    .tickSize(-height)
-    .tickFormat("")
-)
+//svg.append("g")			
+//    .attr("class", "grid")
+//    .call(make_x_gridlines()
+//    .tickSize(-height)
+//    .tickFormat("")
+
+
 //Creating a Key for Bar Chart A
 function barChartKey(barData) {
   var svg = d3.selectAll('.barChartKey')
