@@ -195,6 +195,25 @@ svg rect:hover {
         border-color: rgb(75, 79, 84) transparent transparent transparent;
         }        
 
+#categories {
+        text-align: left;
+        font-family: Helvetica;
+        font-size:  9px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        fill: #297fca;
+}
+
+#categoryNames {
+        text-align: left;
+        font-family: Helvetica;
+        font-size:  9px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        fill: #297fca;
+}
 /*.tooltip-title {
         font-family: Helvetica;
         font-size: 12px;
