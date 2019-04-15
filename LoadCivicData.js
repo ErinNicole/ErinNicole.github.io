@@ -11,8 +11,8 @@ var svgWidth = 900;
 var svgHeight = 600;
 var color = d3.scaleOrdinal()
      .range(["#3399ff", "#66ccff", "#99ffff", "#66cccc", "#6666ff", "#9999ff", "#cc99ff", "#ccccff", "#993399", "#ff6699", "#ff3333", "#cc3333"]);
-//var colorB = d3.scaleOrdinal()
-//     .range(["#3399ff", "#66ccff", "#99ffff", "#66cccc", "#6666ff", "#9999ff", "#cc99ff", "#ccccff", "#993399", "#ff6699", "#ff3333", "#cc3333"]);
+var border = 1;
+var borderColor = 'black';
 
 //Draw Bar Chart 
 function barChart(barData) {
@@ -96,9 +96,19 @@ function barChart(barData) {
 //Creating a key
 function barChartKey(barData) {
   var svg = d3.select('.barChartKey')
-    .attr("width", 70)
-    .attr("height", 700)
-    .style("display", "inline-block");
+    .attr("width", 900)
+    .attr("height", 150)
+    .style("display", "inline-block")
+    .style("border", border);
+
+  // var borderPath = svg.append("rect")
+    // .attr("x", 100)
+    // .attr("y", 0)
+    // .attr("height", 600)
+    // .attr("width", 900)
+    // .style("stroke", borderColor)
+    // .style("fill", "none")
+    // .style("stroke-width", border);
 
   var categories = d3.nest()
     .key(function(d) {
@@ -116,7 +126,7 @@ function barChartKey(barData) {
      return i * 12;
    })
    .attr('dy', 7)
-   .attr('x', 670);
+   .attr('x', 170);
 
   var swatch = svg.selectAll('rect')
     .data(categories);
@@ -124,10 +134,14 @@ function barChartKey(barData) {
   swatch.enter().append("rect")
     .attr("height", 8)
     .attr("width", 8)
-    .attr('y', function(d, i) {
-      return i * 8;
+    .attr('y', function (d, i) {
+      return i * 12;
     })
-    .attr('x', 8)
+    .attr('x', 150)
+    
+    // function(d, i) {
+    //   return i * 12;
+    // })
     .attr("fill", function(d) {
         return color(d.key);
     });

@@ -4,7 +4,7 @@ body {
 
   /* unvisited link */
   a:link {
-    color:rgb(248 144 165);
+    color: grey;
         }
   
   /* visited link */
@@ -131,8 +131,8 @@ svg {
         font-variant: normal; 
         font-weight: normal;
 /*        border: 1px dotted rgb(208 211 212); */
-        padding: 2em;
-        margin-bottom: 10px;
+        padding: 1em;
+        margin-bottom: 8px;
         }  
 
 #xAxis .tick text {
