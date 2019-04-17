@@ -65,7 +65,7 @@ function barChart(barData) {
       return color(d["ASSOCIATION TYPE"]);
     })
 
-  //Creating a tooltip
+  //Create a tooltip
     .on("mousemove", function(d) {
   var mouse = d3.mouse(document.body);
   d3.select("#tooltip")
@@ -79,12 +79,12 @@ function barChart(barData) {
   d3.select("#tooltip")
     .style("display", "none")
 })
-  //Creating the X Axis  
+  //Create the X Axis  
   var xAxis = d3.axisBottom(xScale)
     .tickFormat(d3.format("d"));
   d3.select("#xAxis").call(xAxis);
 
-  //Creating grid lines
+  //Create Grid Lines
   var grid = d3.axisBottom(xScale)
     .tickSize(-svgHeight)
     .tickFormat("");
@@ -93,22 +93,13 @@ function barChart(barData) {
     .attr("transform", "translate(0,560)")
   }
 
-//Creating a key
+//Creating a Key
 function barChartKey(barData) {
   var svg = d3.select('.barChartKey')
-    .attr("width", 900)
+    .attr("width", 400)
     .attr("height", 150)
-    .style("display", "inline-block")
-    .style("border", border);
-
-  // var borderPath = svg.append("rect")
-    // .attr("x", 100)
-    // .attr("y", 0)
-    // .attr("height", 600)
-    // .attr("width", 900)
-    // .style("stroke", borderColor)
-    // .style("fill", "none")
-    // .style("stroke-width", border);
+    .style("display", "center")
+//    .style("border", border);//
 
   var categories = d3.nest()
     .key(function(d) {

@@ -38,6 +38,13 @@ body {
         margin: auto;
         }
 
+#barChartKey {
+        margin: auto;
+        padding:0;
+        border:1;
+        position: center;
+}
+
 h1 { 
         text-align: center;
         font-family: Helvetica; 
@@ -130,7 +137,7 @@ svg {
         font-style: normal; 
         font-variant: normal; 
         font-weight: normal;
-/*        border: 1px dotted rgb(208 211 212); */
+/*        border: 1px dotted rgb(208 211 212); */ 
         padding: 1em;
         margin-bottom: 8px;
         }  

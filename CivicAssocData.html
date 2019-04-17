@@ -45,11 +45,11 @@
                 <img src="CivicAssociationsHeader.jpg" class=center height="450">
         </div>
 
-<!--Tooltip Div-->
+        <!--Tooltip Div-->
         <div id="tooltip" class="hidden"></div>
         <div id="tooltip-title"></div>
  
-    <!--Narrative-->
+        <!--Narrative-->
         <div id="body">
         <br>
                 <p>In the 1831 Alexis de Tocqueville, a French citizen born to an aristocratic family, travelled to America to study the penal system.  Tocqueville, however, was interested in understanding democracy, and in 1835 published Democracy in America.  He made many keen observations of America as he tried to understand how liberty was maintained in the absence of the types of hierarchies present in monarchies.  He found that Americans held the “knowledge of how to combine”, and had an active citizenry that formed all manner of membership associations – unions, churches, social groups, reform crusades, with shared goals and aspirations.
@@ -59,9 +59,16 @@
         <br>
         </div>
  
-    <!--Creating SVG Container for First Interactive Bar Chart (sort on click)-->
+    <!--Create SVG Containers for Bar Chart & Key -->
+
     <div ><h4>Civic Associations by Founding Year and Years in Existence</h4>
         <br>
+    
+    <svg class="barChartKey" width="100%">
+        <g id="categories"></g>
+        <g id="categoryNames"></g>
+    </svg>
+
     <svg class="barChart" width="100%">
         <g id="xAxis" transform="translate(0, 560)"></g>
         <g id="yAxis" transform="translate(0, 0)"></g>
@@ -69,44 +76,14 @@
         <g id="grid"></g>
     </svg>
 
-    <svg class="barChartKey" width="100%">
-        <g id="categories"></g>
-        <g id="categoryNames"></g>
-    </svg>
-
     <!--Narrative-->
         <div id="body">
             <p>
             This chart, created from the data in the published paper, shows some of the great variety of large, sustainable, membership organizations that existed around the time of Tocqueville’s visit and later.  
             </p>
-
-    <!--Creating SVG Container for Second Interactive Bar Chart (sort on click)-->
-<!--    <div ><h4>Scope at Inception: Civic Associations by Founding Year and Years in Existence</h4>
-        <br>
-    <svg class="barChartB" width="100%">
-        <g id="xAxis" transform="translate(10, 560)">
-        </g>
-        <g id="yAxis" transform="translate(0, 0)">        
-        </g>
-        <g id="labels"></g>
-        <g id="grid" transform="translate(0, svgHeight)"></g>
-    </svg>
-
-    <svg class="barChartKeyB" width="100%">
-        <g id="CategoriesB"></g>
-    </svg>
--->
     <script src="LoadCivicData.js"></script>
-
-    <!--Narrative-->
-   <div id="body">
-        <p>
-        This chart, created from the data in the published paper, shows the association's scope at inception: local, national, a combination of local and national, or a portal of an existing overseas organization.  
-        </p>
-    <br>
-    <br>
-    <br>
         </div>
+
         <h3><a href="index.html">Return to Home</a></h3>
         </div>
         </div> 
