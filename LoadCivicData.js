@@ -10,7 +10,7 @@ console.log("Large Civic Associations")
 var svgWidth = 900;
 var svgHeight = 600;
 var color = d3.scaleOrdinal()
-     .range(["#3399ff", "#66ccff", "#99ffff", "#66cccc", "#6666ff", "#9999ff", "#cc99ff", "#ccccff", "#993399", "#ff6699", "#ff3333", "#cc3333"]);
+     .range(["#3399ff", "#b2df8a", "#ff7f00", "#66cccc", "#6666ff", "#9999ff", "#cc99ff", "#ccccff", "#993399", "#ff6699", "#ff3333", "#0a0000"]);
 var border = 1;
 var borderColor = 'black';
 
@@ -28,7 +28,7 @@ function barChart(barData) {
   var maxYear = d3.max(barData, function(d) {
       return parseFloat(d["ENDING YEAR"])
     });
-  
+      
   var xScale = d3.scaleLinear()
     .domain([minYear, maxYear])
     .range([10, 650]);
@@ -68,10 +68,19 @@ function barChart(barData) {
   //Create a tooltip
     .on("mousemove", function(d) {
   var mouse = d3.mouse(document.body);
+  var endingYear = d["ENDING YEAR"];
+  if (d["ENDING YEAR"] == "2000") {
+    endingYear = endingYear + " + ";
+  }
   d3.select("#tooltip")
     .style("display", "inline-block")
     .style("postion", "relative")
-    .html("<div class='tooltip-title'>" + d["ASSOCIATION"] + "<br>" + " Association Type:  " + d["ASSOCIATION TYPE"] + "<br>" + " Founding Year:  " + d["FOUNDING YEAR"] + "<br>" + " Ending Year:  " + d["ENDING YEAR"] + " + " + "</br>" + "</div>")
+    .html("<div class='tooltip-title'>" 
+      + d["ASSOCIATION"] + "<br>" + " Association Type:  " 
+      + d["ASSOCIATION TYPE"] + "<br>" 
+      + " Founding Year:  " + d["FOUNDING YEAR"] + "<br>" 
+      + " Ending Year:  " + endingYear + "</br>" 
+      + "</div>")
     .style("left", mouse[0] + 20 + "px")
     .style("top", mouse[1] - 50 + "px");
 })
