@@ -136,8 +136,7 @@ svg {
         color: #297fca;
         font-style: normal; 
         font-variant: normal; 
-        font-weight: normal;
-/*        border: 1px dotted rgb(208 211 212); */ 
+        font-weight: normal; 
         padding: 1em;
         margin-bottom: 8px;
         }  
@@ -150,7 +149,6 @@ svg {
         font-variant: normal; 
         font-weight: normal;
         fill: #297fca;
-/*        background-color: rgb(208 211 212); */
         }        
 
 #labels {
@@ -221,13 +219,3 @@ svg rect:hover {
         font-weight: normal;
         fill: #297fca;
 }
-/*.tooltip-title {
-        font-family: Helvetica;
-        font-size: 12px;
-        font-weight: bold;
-        color: green;
-        border: 1px solid #fff;
-        pointer-events: none;
-        position: absolute;
-        display: none;
-} */
